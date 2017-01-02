@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.0_af823a433b1a25d316a38386d59ed93e2d2744a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.0_d38759f33a808a0cc51a25a03dc14b5dbd91c8e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.0_bb211667f41ad19cd0fe214b57bca7e4e574e049.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.1.0_adf142ef6259f81f56ce37a54dcd1fa30484844f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.0_1b2733dd825f39528155c4a78eecf6e6e6f17018.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.0_055157b5f2672c2d2084eed72f20708ed6f73f5c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="517fee8797c7b58f5b574988b1a377387317fb3f">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\instant-run_cecd8191de76d286752864817d3e352f8a2a3f4f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5c2d4024bbefa79dc8141a7d8e1fb6cdb15e8b5a">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_30469bcdf6a1e2a1e03b2210e70402f5849a1176.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.0_733f20a0f7a094f73b57ed65ea03c81ee462e39a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.1.0_508d8e2c86861b39dd44bc41ec5b143695f49596.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.1.0_7c7729c29a3dab3f44d2146177014d2d418f3d68.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.0_cedf26e99f6d709dbaee2333ba7090c22db69d3f.jar" />
+    </item>
+
+</items>

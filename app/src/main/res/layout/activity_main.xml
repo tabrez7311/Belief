@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tabish.belief.MainActivity">
+
+    <Button
+        android:text="Panic Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="37dp"
+        android:id="@+id/PanicButton"
+        android:layout_alignBaseline="@+id/FakeCallButton"
+        android:layout_alignBottom="@+id/FakeCallButton"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Fake call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:id="@+id/FakeCallButton"
+        android:layout_marginEnd="47dp"
+        android:layout_alignParentTop="true"
+        android:onClick="fakeCall"
+        android:layout_toStartOf="@+id/PanicButton" />
+
+    <Button
+        android:text="I'm here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ImHereButton"
+        android:layout_below="@+id/FakeCallButton"
+        android:layout_marginTop="96dp"
+        android:layout_alignStart="@+id/FakeCallButton"
+        android:layout_alignEnd="@+id/FakeCallButton" />
+
+    <Button
+        android:text="Siren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ImHereButton"
+        android:layout_alignStart="@+id/PanicButton"
+        android:layout_alignEnd="@+id/PanicButton"
+        android:id="@+id/SirenButton" />
+</RelativeLayout>
