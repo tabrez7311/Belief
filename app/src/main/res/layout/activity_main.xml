@@ -48,5 +48,7 @@
         android:layout_alignTop="@+id/ImHereButton"
         android:layout_alignStart="@+id/PanicButton"
         android:layout_alignEnd="@+id/PanicButton"
+        android:onClick="siren"
         android:id="@+id/SirenButton" />
+
 </RelativeLayout>
