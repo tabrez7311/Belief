@@ -24,6 +24,7 @@ Intent intent = new Intent(MainActivity.this,FakeCall.class);
 
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.sirensound);
         mp.start();
+
         findViewById(R.id.SirenButton).setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
