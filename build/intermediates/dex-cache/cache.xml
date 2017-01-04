@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="2803943c2b81eff40b9646e1d9fda105c1bc82c3">
+        sha1="009a0888d4e120a81c91192638843eea350b2b53">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\instant-run_cecd8191de76d286752864817d3e352f8a2a3f4f.jar" />
     </item>
     <item
@@ -70,7 +70,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="59d78f25bce6f5a02bd479ae73dfe5d3e64699d4">
+        sha1="3ff72a238fd9e3711728627cd0d573df058994e2">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_30469bcdf6a1e2a1e03b2210e70402f5849a1176.jar" />
     </item>
     <item
