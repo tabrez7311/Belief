@@ -6,6 +6,8 @@ import android.media.MediaPlayer;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +33,31 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    /*for menu
+    private int group1Id=1;
+
+    int settingId=Menu.FIRST;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        menu.add(group1Id,settingId,settingId,"Settings");
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case 1:
+                Intent intent = new Intent(MainActivity.this, Settin.class);
+                startActivity(intent);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    */
 
     public void getStarted(View view) {
                 Intent myIntent = new Intent(view.getContext(), MainActivity.class);
