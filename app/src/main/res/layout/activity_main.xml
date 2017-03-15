@@ -8,47 +8,78 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.tabish.belief.MainActivity">
+    tools:context="com.example.ankit.belief.MainActivity">
 
     <Button
-        android:text="Panic Button"
+        android:text="Take photo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="37dp"
-        android:id="@+id/PanicButton"
-        android:layout_alignBaseline="@+id/FakeCallButton"
-        android:layout_alignBottom="@+id/FakeCallButton"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignBottom="@+id/addcontact"
+        android:layout_alignStart="@+id/SirenButton"
+        android:id="@+id/take_snap"
+        android:onClick="clickPhoto"
+        android:layout_alignEnd="@+id/SirenButton" />
 
     <Button
-        android:text="Fake call"
+        android:text="Record"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="105dp"
-        android:id="@+id/FakeCallButton"
-        android:layout_marginEnd="47dp"
-        android:layout_alignParentTop="true"
-        android:onClick="fakeCall"
-        android:layout_toStartOf="@+id/PanicButton" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/ImHereButton"
+        android:layout_marginBottom="27dp"
+        android:id="@+id/recordingButton"
+        android:onClick="recordAudio"
+        android:layout_alignStart="@+id/addcontact" />
+
+    <Button
+        android:text="Siren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="siren"
+        android:id="@+id/SirenButton"
+        android:layout_alignBaseline="@+id/ImHereButton"
+        android:layout_alignBottom="@+id/ImHereButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp" />
 
     <Button
         android:text="I'm here"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ImHereButton"
-        android:layout_below="@+id/FakeCallButton"
-        android:layout_marginTop="96dp"
-        android:layout_alignStart="@+id/FakeCallButton"
-        android:layout_alignEnd="@+id/FakeCallButton" />
+        android:onClick="getLocation"
+        android:layout_above="@+id/PanicButton"
+        android:layout_alignEnd="@+id/addcontact"
+        android:layout_marginBottom="29dp" />
 
     <Button
-        android:text="Siren"
+        android:text="Fake call"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/ImHereButton"
-        android:layout_alignStart="@+id/PanicButton"
-        android:layout_alignEnd="@+id/PanicButton"
-        android:onClick="siren"
-        android:id="@+id/SirenButton" />
+        android:id="@+id/FakeCallButton"
+        android:onClick="fakeCall"
+        android:layout_above="@+id/ImHereButton"
+        android:layout_alignStart="@+id/ImHereButton"
+        android:layout_marginBottom="48dp" />
+
+    <Button
+        android:text="Panic Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PanicButton"
+        android:elevation="0dp"
+        android:layout_above="@+id/addcontact"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="57dp" />
+
+    <Button
+        android:text="Contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addData"
+        android:id="@+id/addcontact"
+        android:layout_above="@+id/recordingButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="48dp" />
 
 </RelativeLayout>

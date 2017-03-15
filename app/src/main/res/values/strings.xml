@@ -15,4 +15,18 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="save_c">Save </string>
+    <string name="add">+</string>
+    <string name="name">Name</string>
+
+    <!--slider code-->
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="slide_1_title">First App developed by TAS!</string>
+    <string name="slide_2_title">T bole toh Tabrez</string>
+    <string name="slide_3_title">A bole toh Ankit</string>
+    <string name="slide_4_title">S bole toh Saif</string>
 </resources>

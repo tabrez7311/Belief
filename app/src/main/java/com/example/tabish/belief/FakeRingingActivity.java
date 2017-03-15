@@ -1,8 +1,5 @@
 package com.example.tabish.belief;
 
-/**
- * Created by Tabish on 02-Jan-17.
- */
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;

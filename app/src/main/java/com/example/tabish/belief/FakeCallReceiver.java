@@ -1,8 +1,5 @@
 package com.example.tabish.belief;
 
-/**
- * Created by Tabish on 02-Jan-17.
- */
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -21,5 +18,4 @@ public class FakeCallReceiver extends BroadcastReceiver{
     }
 
 }
-
 
