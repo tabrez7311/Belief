@@ -14,4 +14,10 @@
     <dimen name="slide_title">30sp</dimen>
     <dimen name="desc_padding">40dp</dimen>
 
+    <!--fake call-->
+    <dimen name="incoming_call_widget_small_circle_size">20.0dip</dimen>
+    <dimen name="incoming_call_widget_circle_size">56.0dip</dimen>
+    <dimen name="glowpadview_outerring_diameter">250.0dip</dimen>
+    <dimen name="layout_margin">20dp</dimen>
+
 </resources>

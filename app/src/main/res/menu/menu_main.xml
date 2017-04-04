@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_contacts"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_addcontacts"
+        android:title="Contacts" />
+
+    <!--
+    <item
+        android:id="@+id/action_sirenon"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_sirenup"
+        android:title="Siren Active"
+        />
+    -->
+    <item
+        android:icon="@drawable/ic_alarm"
+        android:id="@+id/action_fakecall"
+        app:showAsAction="always"
+        android:title="Fake Call"
+    />
+    <item
+        android:id="@+id/action_help"
+        android:title="Help">
+    </item>
+    <item
+        android:id="@+id/action_aboutus"
+        android:title="About Us">
+    </item>
+
+
+</menu>

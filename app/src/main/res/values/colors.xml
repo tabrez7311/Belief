@@ -4,6 +4,17 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <!--Customization-->
+    <color name="black">#000</color>
+
+    <!--fake call-->
+    <color name="white">#fff</color>
+    <color name="darkWhite">#ede4e4e4</color>
+    <color name="incoming_call_decline_circle">#fff44336</color>
+    <color name="incoming_call_widget_bitmap">#ffffffff</color>
+    <color name="glowpad_outer_ring_color">#26ffffff</color>
+    <color name="contact_photo_tint">#a3000000</color>
+
     <!--slider color-->
     <!-- Screens background color-->
     <color name="bg_screen1">#f64c73</color>

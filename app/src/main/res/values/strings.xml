@@ -12,6 +12,7 @@
     <string name="fakecallnumber">080371558000</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="PanicButton">Panic!</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -20,8 +21,15 @@
     <string name="add">+</string>
     <string name="name">Name</string>
 
+    <!--About-->
+    <string name="about">About</string>
+    <string name="about_message">This application was built by TAS as final year project</string>
+    <!--fake call-->
+    <string name="incoming_call">Incoming call</string>
+    <string name="missed">Missed</string>
+
     <!--slider code-->
-    <string name="title_activity_welcome">Home Screen</string>
+    <string name="title_activity_welcome">BELIEF</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
     <string name="start">GOT IT</string>

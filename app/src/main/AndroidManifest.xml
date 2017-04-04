@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.VIBRATE"/>
@@ -23,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:label="@string/title_activity_welcome" android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MainActivity" android:label="@string/title_activity_welcome" android:theme="@style/AppTheme">
 
         </activity>
         <activity
@@ -39,6 +40,7 @@
             android:name=".myLocation"
             android:label="I am Here" />
         <activity android:name=".RecordAudio" />
+        <activity android:name=".HelpMain"></activity>
 
         <receiver android:name=".FakeCallReceiver" />
         <service android:name=".Trigger.HardwareTriggerService"/>
