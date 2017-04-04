@@ -1,6 +1,7 @@
 package com.example.tabish.belief;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -15,18 +16,21 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.tabish.belief.Trigger.HardwareTriggerService;
+import com.example.tabish.belief.mycontactdb;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    public static
-    final int ACCESS_FINE_LOCATION = 2;
+    public static final int ACCESS_FINE_LOCATION = 2;
+    mycontactdb my=new mycontactdb(this);
+    boolean isEmpty=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         startService(new Intent(this, HardwareTriggerService.class));
+        dataCheck();
     }
 
     @Override
@@ -124,6 +128,31 @@ public class MainActivity extends AppCompatActivity {
 
         button.startAnimation(myAnim);
         Toast.makeText(getApplicationContext(), "Panic Button pressed", Toast.LENGTH_SHORT).show();
+    }
+
+    public void dataCheck()
+    {
+        isEmpty= my.checkEmpty();
+        if(isEmpty)
+        {
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("No Contacts")
+                    .setMessage("You have not added a single contact.Do you want to add contacts?")
+                    .setPositiveButton("Add now", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // add
+                            Intent intent = new Intent(MainActivity.this,contacts.class);
+                            startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton("Later", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // do nothing
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        }
     }
 
 }

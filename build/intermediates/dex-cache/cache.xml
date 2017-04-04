@@ -3,6 +3,33 @@
 
     <item
         is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_3476f6730f7e48bc842e55ce4a28431d89952b74\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-10.0.1_04479f34afaab3abf090da099aed5287a683f005\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-v4-impl\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f23ad0f8e58713ff4b55f61c0bbde3830378347c">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-v4-impl-10.0.1_c26537f5589d989e565db9cd7220e9dbfe96f77f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\10.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -30,12 +57,48 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.0_1b2733dd825f39528155c4a78eecf6e6e6f17018\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="09cf6aa1390f95157e8295d02be7868f568825fc">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-10.0.1_ad1d17127e2f30431a8127a7a92deb8193d43e50\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.0_af823a433b1a25d316a38386d59ed93e2d2744a7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="57c2eceb8548de84509d1ebc293fedec53231f6c">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-10.0.1_36958c61bf3434acb08b9efa6e18103be11628da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44a694d4095be84c2888764b1f7256b385c030ad">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-10.0.1_967d1070cd0094dcda3b3ce76d93484cf797ec6f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -48,11 +111,29 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4c829ff0ccfecb28a999ee46d9e75948dfc777a4">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-10.0.1_ee59418adef48573419d7df1404a91037ea90e93\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.1.0_1951956c00b73f68ca1c1d1e0cc3b61a9a674bc0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="cafdc28072151d5fb9d678cc053816013f075551">
+        sha1="4c0de0ba228c9265937771c7f03b6f0f461712cb">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_30469bcdf6a1e2a1e03b2210e70402f5849a1176\classes.dex" />
     </item>
     <item
@@ -66,6 +147,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b1df8fa3d372a27e4e969ce00b00689ee1eed031">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-10.0.1_fc7070cd7ad8fab6649fd011888adb8f68592764\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\10.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -75,12 +165,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-10.0.1_8540c97f9c294da91d815178963f6a6bc9a96262\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\10.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="ffc15e965a9e8c28f24455eedd4cac215c45d1fc">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-10.0.1_4bd10224f832a85b0bbbcb89082134c1b6bf17af\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="408a599ac77cd17fe8e8919326bec617b3d005bd">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-10.0.1_d87031ebfc411ba3afce0fdab23e50ad73c573fc\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -99,6 +207,42 @@
         revision="25.0.2"
         sha1="1e11c68fec92a17c84dd8d1dd80e74c4e67b12e2">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-10.0.1_171882df210c8a30b1954c98772e5e50005fb274\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.0_055157b5f2672c2d2084eed72f20708ed6f73f5c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="39907d5c8f5902fffef30160ca7447c93b82405c">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-10.0.1_51ae2f4af9ee25f9e03d7409fb9d98c16936006a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_2dd6df630cd0e164979f4d85bcf0f09d8aa6de98\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.1.0_159037f588c0c00582d1b7a8a746255ff3a7a28f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,6 +282,33 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.0_733f20a0f7a094f73b57ed65ea03c81ee462e39a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_bb7cb9adc53d881f382ab0add661682bdb055380\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1d193729baf37df3d902a423291423a0df7e3779">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-10.0.1_d8b4be97dd09f388c4dc38b48a9e6bbc8ac7cee7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\10.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -147,12 +318,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45305e6af414dab5aba6c3225081c2f15c3bdd1e">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-10.0.1_a513bae558fc9c5c4267680781b8fa7100899130\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\10.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="d0460bf07cc3657e0be518ca01c174493951c6b8">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-10.0.1_56b5789613355afa6556a14a32611f25827741ab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-10.0.1_37ff029099e5f79a58f7d4c376a5ef4874aa2303\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -171,6 +360,24 @@
         revision="25.0.2"
         sha1="e871881b36b32e6bfd271a830c6eeb54ff0fc185">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-10.0.1_60572fd13466e902c62605248cedfae934cb5ac1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2d5d113b0352ab60946fc44c518cf68fd26cbb79">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-10.0.1_26ae5804e12a08daf4542669098f91ecc25aa5c7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.1.0_7c7729c29a3dab3f44d2146177014d2d418f3d68\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -201,12 +408,57 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.1.0_f1f3476a2572769d04fa0f43a303e9c521f6d33e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ba6aa5e69ef31dee57208125323cee958fc67565">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-10.0.1_1cf0ffd7bdee57e7e1960c4826d3f5961018a17b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.1.0_cedf26e99f6d709dbaee2333ba7090c22db69d3f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c14f0c89f28cf782e42581ab0aba5f63af39b3d2">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-10.0.1_1d8a05a3f0936b282113a686b47bd27de5652043\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="971509bbe30bb7b971fc1c49d7b23d0d818830ac">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-10.0.1_7b43c8caa132893c0c35c4f8266f067b279a66ea\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.0_508d8e2c86861b39dd44bc41ec5b143695f49596\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -228,12 +480,57 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="92c871a22463a247e8a77a9f3fd231c278788c4a">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-10.0.1_5658a2509cb9aad2e8315a797df9deb92f2c0ff7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-10.0.1_f6bada4b496ec26bbd1e83d1369e1912af3529f2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.1.0_d38759f33a808a0cc51a25a03dc14b5dbd91c8e2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-10.0.1_96b563f32c695a3b4ede3d6f45b2f7f0883084b5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="aee64634871d88a419d59eb743c1258a60f19700">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.1.0_bb211667f41ad19cd0fe214b57bca7e4e574e049\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-10.0.1_8de66111c98ead406abe5f0713771901f4803aaf\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -300,308 +597,11 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_3476f6730f7e48bc842e55ce4a28431d89952b74\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-10.0.1_04479f34afaab3abf090da099aed5287a683f005\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-v4-impl\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f23ad0f8e58713ff4b55f61c0bbde3830378347c">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-v4-impl-10.0.1_c26537f5589d989e565db9cd7220e9dbfe96f77f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.0_1b2733dd825f39528155c4a78eecf6e6e6f17018\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="09cf6aa1390f95157e8295d02be7868f568825fc">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-10.0.1_ad1d17127e2f30431a8127a7a92deb8193d43e50\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="57c2eceb8548de84509d1ebc293fedec53231f6c">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-10.0.1_36958c61bf3434acb08b9efa6e18103be11628da\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="44a694d4095be84c2888764b1f7256b385c030ad">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-10.0.1_967d1070cd0094dcda3b3ce76d93484cf797ec6f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4c829ff0ccfecb28a999ee46d9e75948dfc777a4">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-10.0.1_ee59418adef48573419d7df1404a91037ea90e93\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.1.0_1951956c00b73f68ca1c1d1e0cc3b61a9a674bc0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b1df8fa3d372a27e4e969ce00b00689ee1eed031">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-10.0.1_fc7070cd7ad8fab6649fd011888adb8f68592764\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-10.0.1_8540c97f9c294da91d815178963f6a6bc9a96262\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="408a599ac77cd17fe8e8919326bec617b3d005bd">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-10.0.1_d87031ebfc411ba3afce0fdab23e50ad73c573fc\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.0_055157b5f2672c2d2084eed72f20708ed6f73f5c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="39907d5c8f5902fffef30160ca7447c93b82405c">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-10.0.1_51ae2f4af9ee25f9e03d7409fb9d98c16936006a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_2dd6df630cd0e164979f4d85bcf0f09d8aa6de98\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.1.0_159037f588c0c00582d1b7a8a746255ff3a7a28f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.0_733f20a0f7a094f73b57ed65ea03c81ee462e39a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_bb7cb9adc53d881f382ab0add661682bdb055380\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1d193729baf37df3d902a423291423a0df7e3779">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-10.0.1_d8b4be97dd09f388c4dc38b48a9e6bbc8ac7cee7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="45305e6af414dab5aba6c3225081c2f15c3bdd1e">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-10.0.1_a513bae558fc9c5c4267680781b8fa7100899130\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-10.0.1_37ff029099e5f79a58f7d4c376a5ef4874aa2303\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2d5d113b0352ab60946fc44c518cf68fd26cbb79">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-10.0.1_26ae5804e12a08daf4542669098f91ecc25aa5c7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.1.0_7c7729c29a3dab3f44d2146177014d2d418f3d68\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.1.0_f1f3476a2572769d04fa0f43a303e9c521f6d33e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ba6aa5e69ef31dee57208125323cee958fc67565">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-10.0.1_1cf0ffd7bdee57e7e1960c4826d3f5961018a17b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c14f0c89f28cf782e42581ab0aba5f63af39b3d2">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-10.0.1_1d8a05a3f0936b282113a686b47bd27de5652043\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="971509bbe30bb7b971fc1c49d7b23d0d818830ac">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-10.0.1_7b43c8caa132893c0c35c4f8266f067b279a66ea\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.0_508d8e2c86861b39dd44bc41ec5b143695f49596\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="92c871a22463a247e8a77a9f3fd231c278788c4a">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-10.0.1_5658a2509cb9aad2e8315a797df9deb92f2c0ff7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-10.0.1_f6bada4b496ec26bbd1e83d1369e1912af3529f2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.1.0_d38759f33a808a0cc51a25a03dc14b5dbd91c8e2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-10.0.1_96b563f32c695a3b4ede3d6f45b2f7f0883084b5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
-        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-10.0.1_8de66111c98ead406abe5f0713771901f4803aaf\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="7853d3f8d729374b042ad3b02ebd187a91ae7815">
+        sha1="5048f03683c81bc390425dfaf962e36535cd17e7">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_cecd8191de76d286752864817d3e352f8a2a3f4f\classes.dex" />
     </item>
     <item

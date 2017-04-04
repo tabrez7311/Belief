@@ -13,17 +13,22 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WelcomeActivity">
+        <activity android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".WelcomeActivity" android:theme="@android:style/Theme.Black.NoTitleBar"/>
+        <!--Main Activity-->
         <activity android:name=".MainActivity" android:label="@string/title_activity_welcome" android:theme="@style/AppTheme">
 
         </activity>
@@ -40,7 +45,7 @@
             android:name=".myLocation"
             android:label="I am Here" />
         <activity android:name=".RecordAudio" />
-        <activity android:name=".HelpMain"></activity>
+        <activity android:name=".HelpMain" android:theme="@android:style/Theme.Black.NoTitleBar"/>
 
         <receiver android:name=".FakeCallReceiver" />
         <service android:name=".Trigger.HardwareTriggerService"/>

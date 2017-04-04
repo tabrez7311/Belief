@@ -7,8 +7,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-
-
 class mycontactdb extends SQLiteOpenHelper{
 
 
@@ -63,6 +61,20 @@ class mycontactdb extends SQLiteOpenHelper{
         return res;
     }
 
+    public boolean checkEmpty() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String count = "SELECT count(*) FROM "+ TABLE_NAME;
+        Cursor mcursor = db.rawQuery(count, null);
+        mcursor.moveToFirst();
+        int icount = mcursor.getInt(0);
+        if (icount > 0) {
+//leave
+            return false;
+        } else {
+            return true;
+//populate table
+        }
+    }
 
 }
 
