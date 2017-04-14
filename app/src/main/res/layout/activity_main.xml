@@ -75,6 +75,17 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button" />
 
+    <ImageButton
+        android:id="@+id/SafeButton"
+        android:onClick="safe"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_safe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:visibility="invisible"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

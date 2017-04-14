@@ -52,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="85e2d5906f3b519428f6a441a7ce0b52f1480c46">
+        sha1="15804620e5dc067ddb1732f1fe3abd9df910e184">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_30469bcdf6a1e2a1e03b2210e70402f5849a1176\classes.dex" />
     </item>
     <item
@@ -291,6 +291,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\libs\additionnal.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bd9e8dc422bb8c8405359947fe9f4282b49f57f4">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\2\additionnal_b6830a250ac3183951db26e30f585c561e7e0ded\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\10.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -444,6 +453,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\libs\activation.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d1257cbff6faa44c1f325ae0d9413522d4644383">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\2\activation_3d0483579f630329e80217c68e6c06c76a7df84d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -468,6 +486,15 @@
         revision="25.0.2"
         sha1="1d193729baf37df3d902a423291423a0df7e3779">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-10.0.1_d8b4be97dd09f388c4dc38b48a9e6bbc8ac7cee7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tabish\AndroidStudioProjects\Belief\app\libs\mail.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="428e267abff0d10802ccde86b915da2c20471160">
+        <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\2\mail_2bae280b2fa4511d2cb1bde416d833cf3f1e1d26\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -601,7 +628,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a030cdb58c0135abcb93415a8ce3435d9bc57c77">
+        sha1="1921265c61b18fa9570c13f4194efdea523c1261">
         <dex dex="C:\Users\Tabish\AndroidStudioProjects\Belief\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_cecd8191de76d286752864817d3e352f8a2a3f4f\classes.dex" />
     </item>
     <item

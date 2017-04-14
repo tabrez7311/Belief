@@ -27,7 +27,7 @@ import com.google.android.gms.location.LocationSettingsResult;
 
 public class myLocation extends AppCompatActivity implements ConnectionCallbacks, OnConnectionFailedListener, LocationListener {
 
-    protected static final String TAG = "Location service goes here";
+    protected static final String TAG = "Location service here";
     protected GoogleApiClient mGoogleApiClient;
     protected Location mLastLocation;
     protected TextView mLatitudeText;
@@ -105,13 +105,13 @@ public class myLocation extends AppCompatActivity implements ConnectionCallbacks
 
     @Override
     public void onConnectionSuspended(int cause){
-        Log.i(TAG,"Connecton suspended");
+        Log.i(TAG,"Connection suspended");
         mGoogleApiClient.connect();
     }
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        Log.i(TAG,"Connecyion Failed");
+        Log.i(TAG,"Connection Failed");
     }
 
     @Override

@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,30 +22,54 @@ public class contacts extends Activity {
     private static final int RESULT_PICK_CONTACT = 85500;
     public TextView textView1;
     EditText editText1;
-    Button save_contact,viewAll;
+    EditText editText2;
+    Button addEmail,addNumber;
     mycontactdb mydb;
+    private LinearLayout mLayout;
+    public int n=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contact_activity);
+        mLayout=(LinearLayout)findViewById(R.id.phoneLayout);
         mydb = new mycontactdb(this);
-        save_contact = (Button) findViewById(R.id.save_c);
-        viewAll = (Button) findViewById(R.id.viewA);
-        textView1 = (TextView) findViewById(R.id.name1);
+
+        addEmail = (Button) findViewById(R.id.addEmail);
+        addNumber=(Button) findViewById(R.id.addNumber);
         editText1 = (EditText) findViewById(R.id.ph_no1);
-        AddData();
-        viewAll();
+        editText2 = (EditText) findViewById(R.id.email1);
+        AddContact();
+        addEmail();
     }
 
-    public void AddData() {
-        save_contact.setOnClickListener(
-                new View.OnClickListener() {
+
+    public void AddContact() {
+        addNumber.setOnClickListener(
+                    new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         boolean isInserted = mydb.insertData(editText1.getText().toString());
                         if (isInserted) {
-                            Toast.makeText(contacts.this, "Data Inserted", Toast.LENGTH_LONG).show();
+                            Toast.makeText(contacts.this, "Phone number added", Toast.LENGTH_LONG).show();
+                           // mLayout.addView(createNewTextView(editText1.getText().toString()));
+
+                        } else {
+                            Toast.makeText(contacts.this, "Error occured", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }
+        );
+    }
+
+    public void addEmail(){
+        addEmail.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        boolean isInserted = mydb.insertEmail(editText2.getText().toString());
+                        if (isInserted) {
+                            Toast.makeText(contacts.this, "Email Added", Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(contacts.this, "Error occured", Toast.LENGTH_LONG).show();
 
@@ -51,9 +77,49 @@ public class contacts extends Activity {
                     }
                 }
         );
+
     }
 
+  /*  private TextView createNewTextView(String text) {
 
+        final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        final TextView textView = new TextView(this);
+        lparams.topMargin=3;
+        textView.setLayoutParams(lparams);
+        textView.setText(text);
+        textView.setId(n);
+        addButton.setText("-");
+        addButton.setId(n);
+        n++;
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        params.setMarginStart(15);
+        params.topMargin=3;
+        addButton.setOnClickListener(listener);
+        mLayout.addView(addButton,params);
+        return textView;
+    }
+
+    public View.OnClickListener listener=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            
+        }
+    };
+   /* private Button removeButton()
+    {
+        Button addButton =new Button(this);
+        addButton.setText("-");
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        params.addRule(RelativeLayout.BELOW,R.id.addNumber);
+        params.addRule(RelativeLayout.ALIGN_START,R.id.addNumber);
+        mLayout.addView(addButton,params);
+        return addButton;
+    }*/
+
+
+
+
+/*
     public void viewAll() {
         viewAll.setOnClickListener(
                 new View.OnClickListener() {
@@ -67,7 +133,9 @@ public class contacts extends Activity {
                         StringBuilder buffer = new StringBuilder();
                         while (res.moveToNext()) {
                             buffer.append("ID    :" + res.getString(0) + "\n");
-                            buffer.append("First : " + res.getString(1) + "\n");
+                            buffer.append("Name : " + res.getString(1) + "\n");
+                            buffer.append("Mob. : " + res.getString(2) + "\n");
+                            buffer.append("Email : " + res.getString(3) + "\n");
                         }
                         showMessage("Data", buffer.toString());
                     }
@@ -108,8 +176,8 @@ public class contacts extends Activity {
      * Query the Uri and read contact details. Handle the picked contact data.
      * @param data
 
-     */
-
+*/
+    /*
     private void contactPicked(Intent data) {
         Cursor cursor;
         try {
@@ -135,6 +203,7 @@ public class contacts extends Activity {
             e.printStackTrace();
         }
     }
+    */
 }
 
 

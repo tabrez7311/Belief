@@ -13,17 +13,20 @@ class mycontactdb extends SQLiteOpenHelper{
     private static final String SQL_DELETE_ENTRIES ="DROP TABLE IF EXISTS " + mycontactdb.TABLE_NAME;
     private static final String DATABASE_NAME = "contact.db";
     private static final String TABLE_NAME = "contact_table";
+    private static final String TABLE_NAME2 = "email_table";
     private static final String col_1 = "_ID";
-    private static final String cont1="contact_one";
-    private static final String cont2="contact_two";
+    public static final String cont1="contact_one";
+    public static final String email1="email_one";
 
-    private static final String cont3="contact_three";
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + mycontactdb.TABLE_NAME + " (" +
                     mycontactdb.col_1 + " INTEGER PRIMARY KEY, " +
-                    mycontactdb.cont1 + " INTEGER, " +
-                    mycontactdb.cont2 + " INTEGER, "+
-                    mycontactdb.cont3 + " INTEGER)";
+                    mycontactdb.cont1 + " VARCHAR(15) not null" +" )";
+
+    private static final String SQL_Email=
+            "CREATE TABLE " + mycontactdb.TABLE_NAME2 + " (" +
+                    mycontactdb.col_1 + " INTEGER PRIMARY KEY, " +
+                    mycontactdb.email1 + " VARCHAR(30) not null" +" )";
 
 
     mycontactdb(Context context) {
@@ -34,12 +37,26 @@ class mycontactdb extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ENTRIES);
+        db.execSQL(SQL_Email);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(SQL_DELETE_ENTRIES);
         onCreate(db);
+    }
+
+    boolean insertEmail(String email_one)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(email1,email_one);
+        long result = db.insert(TABLE_NAME2,null,contentValues);
+        if(result == -1){
+            return false;
+        }else{
+            return true;
+        }
     }
 
     boolean insertData(String contact_one){

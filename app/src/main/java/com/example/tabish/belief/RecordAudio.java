@@ -66,7 +66,7 @@ public class RecordAudio extends AppCompatActivity {
         return sb.toString();
     }
 
-    private void startAudioRecording(){
+    public void startAudioRecording(){
         try {
             mediaRecorder.prepare();
             mediaRecorder.start();
@@ -74,7 +74,7 @@ public class RecordAudio extends AppCompatActivity {
             e.printStackTrace();
         }
         recordingButton.setEnabled(false);
-        CountDownTimer countDowntimer = new CountDownTimer(30000, 1000) {
+        CountDownTimer countDowntimer = new CountDownTimer(45000, 1000) {
             public void onTick(long millisUntilFinished) {
             }
             public void onFinish() {
@@ -83,7 +83,7 @@ public class RecordAudio extends AppCompatActivity {
 
     }
 
-    private void stopAudioRecording(){
+    public void stopAudioRecording(){
         if(mediaRecorder != null){
             mediaRecorder.stop();
             mediaRecorder.release();

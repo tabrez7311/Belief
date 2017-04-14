@@ -33,4 +33,9 @@ dependencies {
 
 dependencies {
     compile 'com.google.code.gson:gson:2.2.+'
+    compile 'com.android.support:support-v4:25.1.0'
+    compile files('libs/activation.jar')
+    compile files('libs/additionnal.jar')
+    compile files('libs/mail.jar')
+
 }
