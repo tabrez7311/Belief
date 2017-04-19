@@ -1,12 +1,14 @@
 package com.example.tabish.belief;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -20,13 +22,18 @@ import android.widget.Toast;
 public class contacts extends Activity {
 
     private static final int RESULT_PICK_CONTACT = 85500;
-    public TextView textView1;
+    public TextView showDetails;
     EditText editText1;
     EditText editText2;
     Button addEmail,addNumber;
+    Button showEmail,showNumber;
+    Button deleteEmail,deleteNumber;
     mycontactdb mydb;
     private LinearLayout mLayout;
     public int n=1;
+    String del_num_id,del_email_id;
+    boolean isNumDeleted=false;
+    boolean isEmailDeleted=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +46,19 @@ public class contacts extends Activity {
         addNumber=(Button) findViewById(R.id.addNumber);
         editText1 = (EditText) findViewById(R.id.ph_no1);
         editText2 = (EditText) findViewById(R.id.email1);
+        showEmail=(Button)findViewById(R.id.show_email);
+        showNumber=(Button)findViewById(R.id.show_num);
+        showDetails=(TextView)findViewById(R.id.show);
+        deleteNumber=(Button)findViewById(R.id.deleteNum);
+        deleteEmail=(Button)findViewById(R.id.deleteEmail);
+
+
         AddContact();
         addEmail();
+        setShowEmail();
+        setShowNumber();
+        setDeleteEmail();
+        setDeleteNumber();
     }
 
 
@@ -52,11 +70,14 @@ public class contacts extends Activity {
                         boolean isInserted = mydb.insertData(editText1.getText().toString());
                         if (isInserted) {
                             Toast.makeText(contacts.this, "Phone number added", Toast.LENGTH_LONG).show();
+
                            // mLayout.addView(createNewTextView(editText1.getText().toString()));
 
                         } else {
                             Toast.makeText(contacts.this, "Error occured", Toast.LENGTH_LONG).show();
                         }
+                        editText1.setText("");
+                        showDetails.setText("");
                     }
                 }
         );
@@ -74,12 +95,147 @@ public class contacts extends Activity {
                             Toast.makeText(contacts.this, "Error occured", Toast.LENGTH_LONG).show();
 
                         }
+                        editText2.setText("");
+                        showDetails.setText("");
                     }
                 }
         );
 
     }
 
+    public void setShowEmail() {
+        showEmail.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Cursor cursor=mydb.getAllEmail();
+                        if(cursor.getCount()==0)
+                        {
+                            showDetails.setText("");
+                            Toast.makeText(getApplicationContext(),"Data not found",Toast.LENGTH_SHORT).show();
+
+                            return;
+                        }
+                        StringBuffer data=new StringBuffer();
+                        while(cursor.moveToNext())
+                        {
+                            data.append("ID: "+cursor.getInt(0)+"\n");
+                            data.append("Email: "+cursor.getString(1)+"\n");
+                        }
+                        showDetails.setText(data);
+                    }
+                });
+    }
+
+    public void setShowNumber() {
+        showNumber.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Cursor cursor=mydb.getAllData();
+                        if(cursor.getCount()==0)
+                        {
+                            showDetails.setText("");
+                            Toast.makeText(getApplicationContext(),"Data not found",Toast.LENGTH_SHORT).show();
+
+                            return;
+                        }
+                        StringBuffer data=new StringBuffer();
+                        while(cursor.moveToNext())
+                        {
+                            data.append("ID: "+cursor.getInt(0)+"\n");
+                            data.append("Number: "+cursor.getString(1)+"\n");
+                        }
+                        showDetails.setText(data);
+                    }
+                });
+    }
+
+    public void setDeleteNumber(){
+        deleteNumber.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(contacts.this);
+                        builder.setTitle("Delete");
+                        builder.setMessage("Enter Id of number to be deleted");
+// Set up the input
+                        final EditText input = new EditText(contacts.this);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                        input.setInputType(InputType.TYPE_CLASS_NUMBER);
+                        builder.setView(input);
+
+// Set up the buttons
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                del_num_id = input.getText().toString();
+                                isNumDeleted=mydb.deleteNumber(Integer.parseInt(del_num_id));
+                                showDetails.setText("");
+                                if(isNumDeleted)
+                                {
+                                    //Toast.makeText(contacts.this, "Number Deleted", Toast.LENGTH_SHORT).show();
+                                }
+                                else
+                                {
+                                    //Toast.makeText(contacts.this, "ID not found", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                        builder.show();
+                    }
+    });
+    }
+
+    public void setDeleteEmail(){
+        deleteEmail.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(contacts.this);
+                        builder.setTitle("Delete");
+                        builder.setMessage("Enter Id of email to be deleted");
+// Set up the input
+                        final EditText input = new EditText(contacts.this);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                        input.setInputType(InputType.TYPE_CLASS_NUMBER);
+                        builder.setView(input);
+
+// Set up the buttons
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                del_email_id = input.getText().toString();
+                                isEmailDeleted=mydb.deleteEmail(Integer.parseInt(del_email_id));
+                                showDetails.setText("");
+                                if(isEmailDeleted)
+                                {
+                                    //Toast.makeText(contacts.this, "Email Deleted", Toast.LENGTH_SHORT).show();
+                                }
+                                else
+                                {
+                                    //Toast.makeText(contacts.this, "ID not found", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                        builder.show();
+                    }
+                });
+    }
   /*  private TextView createNewTextView(String text) {
 
         final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);

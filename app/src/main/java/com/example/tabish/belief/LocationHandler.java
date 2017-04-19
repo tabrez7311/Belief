@@ -62,209 +62,6 @@ public class LocationHandler extends Service {
     static final String AB = "abcdefghijklmnopqrstuvwxyz";
     static Random rnd = new Random();
 
-    public class GPSAsync implements LocationListener {
-        private Location currentBestLocation = null;
-
-
-        protected void startInnerClass() {
-            System.out.println("---------------------SYNC TASK-----------------");
-            // TODO Auto-generated method stub
-            locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-            final boolean statusOfGPS = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-
-            if (!statusOfGPS)
-                turnGPSOn();
-
-            if (ActivityCompat.checkSelfPermission(LocationHandler.this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(LocationHandler.this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return;
-            }
-            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-            System.out.println("---------------------LOCATION LISTENER CALLED-----------------");
-
-
-            final Handler hand = new Handler();
-            hand.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    if (ActivityCompat.checkSelfPermission(LocationHandler.this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(LocationHandler.this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        return;
-                    }
-                    Location lastKnownNetworkLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-                    Location lastKnownGPSLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                    if (isBetterLocation(lastKnownNetworkLocation, currentBestLocation))
-                        currentBestLocation = lastKnownNetworkLocation;
-                    if (lastKnownGPSLocation != null)
-                        if (isBetterLocation(lastKnownGPSLocation, currentBestLocation))
-                            currentBestLocation = lastKnownGPSLocation;
-                    System.out.println("---------------------LOCATION DETERMINED-----------------");
-                    if (currentBestLocation != null) {
-                        double latitude = currentBestLocation.getLatitude();
-                        double longitude = currentBestLocation.getLongitude();
-                        String Text = "My current location is:\n" + "Latitude =" + latitude + "\nLongitude =" + longitude;
-                        Geocoder geo = new Geocoder(LocationHandler.this.getApplicationContext(), Locale.getDefault());
-                        List<Address> addresses;
-                        try {
-                            addresses = geo.getFromLocation(currentBestLocation.getLatitude(), currentBestLocation.getLongitude(), 1);
-                            if (addresses.size() > 0) {
-                                String message = "\n\nAddress:\n" + addresses.get(0).getFeatureName() +
-                                        "," + addresses.get(0).getLocality() +
-                                        "," + addresses.get(0).getAdminArea() +
-                                        "," + addresses.get(0).getCountryName();
-                                File file = new File(Environment.getExternalStorageDirectory().getPath() + "/Belief/GPS.txt");
-                                if (!file.exists()) {
-                                    file.createNewFile();
-                                }
-                                FileWriter out = new FileWriter(file);
-                                out.write(Text);
-                                out.write(message);
-                                out.close();
-                                //locationManager.removeUpdates(gpsLocationListener);
-                                // locationManager.removeUpdates(networkLocationListener);
-                                // locationManager = null;
-                                StringBuilder stringBuilder = new StringBuilder();
-
-                                stringBuilder.append(Text);
-                                stringBuilder.append(message);
-                                finalString = stringBuilder.toString();
-                            }
-                        } catch (IOException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        }
-                    } else {
-                        try {
-                            File file = new File(Environment.getExternalStorageDirectory().getPath() + "/Belief/GPS.txt");
-                            if (!file.exists()) {
-                                file.createNewFile();
-                            }
-                            FileWriter out = new FileWriter(file);
-                            out.write("Location is unavailable");
-                            out.close();
-                        } catch (IOException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        }
-
-                    }
-                    locationManager.removeUpdates(listener);
-
-                    if (!statusOfGPS)
-                        turnGPSOff();
-                    System.out.println("--------------------END OF ASYNC TASK-----------------");
-                }
-            }, 15000);
-        }
-
-        private void turnGPSOn() {
-
-            String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-            if (!provider.contains("gps")) {
-                final Intent poke = new Intent();
-                poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
-                poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
-                poke.setData(Uri.parse("3"));
-                sendBroadcast(poke);
-            }
-        }
-
-        public void turnGPSOff() {
-            String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-            if (provider.contains("gps")) { //if gps is enabled
-                final Intent poke = new Intent();
-                poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
-                poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
-                poke.setData(Uri.parse("3"));
-                sendBroadcast(poke);
-            }
-        }
-
-
-        @Override
-        public void onLocationChanged(Location location) {
-            if (ActivityCompat.checkSelfPermission(LocationHandler.this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(LocationHandler.this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return;
-            }
-            Location lastKnownNetworkLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-            Location lastKnownGPSLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            if (lastKnownNetworkLocation != null)
-                if (isBetterLocation(lastKnownNetworkLocation, currentBestLocation))
-                    currentBestLocation = location;
-            if (lastKnownGPSLocation != null)
-                if (isBetterLocation(lastKnownGPSLocation, currentBestLocation))
-                    currentBestLocation = location;
-
-        }
-
-        @Override
-        public void onProviderDisabled(String provider) {
-            // TODO Auto-generated method stub
-
-        }
-
-        @Override
-        public void onProviderEnabled(String provider) {
-            // TODO Auto-generated method stub
-
-        }
-
-        @Override
-        public void onStatusChanged(String provider, int status, Bundle extras) {
-            // TODO Auto-generated method stub
-
-        }
-
-
-        protected boolean isBetterLocation(Location location, Location currentBestLocation) {
-            final int ONE_MINUTE = 1000 * 60 * 1;
-            if (currentBestLocation == null)
-                // A new location is always better than no location
-                return true;
-            else {
-                // Computing accurate gps location
-                long timeDelta = location.getTime() - currentBestLocation.getTime();
-                boolean isSignificantlyNewer = timeDelta > ONE_MINUTE;
-                boolean isSignificantlyOlder = timeDelta < -ONE_MINUTE;
-                boolean isNewer = timeDelta > 0;
-                // Check whether the new location fix is more or less accurate
-                int accuracyDelta = (int) (location.getAccuracy() - currentBestLocation.getAccuracy());
-                boolean isLessAccurate = accuracyDelta > 0;
-                boolean isMoreAccurate = accuracyDelta < 0;
-                boolean isSignificantlyLessAccurate = accuracyDelta > 150;
-
-                if (isMoreAccurate)
-                    return true;
-                else if (isNewer && !isSignificantlyLessAccurate)
-                    return true;
-                return false;
-            }
-        }
-
-
-    }
-
-
     @Override
     public IBinder onBind(Intent arg0) {
         // TODO Auto-generated method stub
@@ -308,8 +105,8 @@ public class LocationHandler extends Service {
             @Override
             public void run() {
                 try {
-                    listener = new GPSAsync();
-                    ((GPSAsync) listener).startInnerClass();
+                  //  listener = new GPSAsync();
+                    // ((GPSAsync) listener).startInnerClass();
                     System.out.println("--------------------CALL+MESSAGE LOG OBTAINED-----------------");
                 } catch (Exception e) {
                     // TODO Auto-generated catch block
@@ -343,7 +140,7 @@ public class LocationHandler extends Service {
                             StrictMode.ThreadPolicy.Builder().permitAll().build();
                     StrictMode.setThreadPolicy(policy);
                     String mailers = my.email1.toString();
-                    GmailSender sender = new GmailSender("tabrezshaikh7311@gmail.com", "Belief");
+                    GmailSender sender = new GmailSender("tabrezshaikh7311@gmail.com", "");
                     sender.sendMail("Belief App Team",
                             "This is an automatically generated mail... ",
                             "tabrezshaikh7311@gmail.com",

@@ -1,15 +1,16 @@
 package com.example.tabish.belief;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -19,8 +20,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.tabish.belief.Trigger.HardwareTriggerReceiver;
 import com.example.tabish.belief.Trigger.HardwareTriggerService;
+import com.example.tabish.belief.cameraback.DemoCamService;
 import com.example.tabish.belief.mycontactdb;
+import com.example.tabish.belief.cameraback.HiddenCamera.HiddenCameraFragment;
+import com.example.tabish.belief.sendmail.GMailSender;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
     mycontactdb my=new mycontactdb(this);
     boolean isEmpty=false;
 //    String sms= "YOUR POSITION IS HERE";
+    private HiddenCameraFragment mHiddenCameraFragment;
+    HardwareTriggerReceiver htr;
+    boolean emailSent=false,smsSent=false;
+    String[] email;
+
+    //sms
+    String[] phone;
+    String message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,9 +158,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void clickPhoto(View view){
-        //Intent intent = new Intent(MainActivity.this,CaptureCameraImage.class);
-        //startActivity(intent);
+    public void clickPhoto(){
+        if (mHiddenCameraFragment != null) {    //Remove fragment from container if present
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .remove(mHiddenCameraFragment)
+                    .commit();
+            mHiddenCameraFragment = null;
+        }
+
+        startService(new Intent(MainActivity.this, DemoCamService.class));
     }
 
     public void getLocation(View view){
@@ -155,33 +175,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-   /* public void siren(View view){
-
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sirensound);
-        mp.start();
-
-        findViewById(R.id.SirenButton).setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-
-                if(!mp.isPlaying())
-                {
-                    mp.start();
-                }
-                else{
-                    mp.seekTo(0);
-                    mp.pause();
-
-                }
-            }
-        });
-    }*/
-
     public void recordAudio(){
         Intent intent=new Intent(MainActivity.this,RecordAudio.class);
         startActivity(intent);
     }
-
-
 
     public void panic(View view){
         ImageButton button = (ImageButton)findViewById(R.id.PanicButton);
@@ -194,11 +191,21 @@ public class MainActivity extends AppCompatActivity {
 
         button.startAnimation(myAnim);
         Toast.makeText(getApplicationContext(), "Panic Button pressed", Toast.LENGTH_SHORT).show();
-        startService(new Intent(this,LocationHandler.class));
         button.setVisibility(View.INVISIBLE);
         button2.setVisibility(View.VISIBLE);
+        htr.startInner();
+        //clickPhoto();
+        //if(sendMail()) {
+//            Log.d("EMAIL","SEND");
+//        }
+//        else
+//        {
+//            Log.d("EMAIL","FAILED");
+//        }
+        //startService(new Intent(this,LocationHandler.class));
         //sendSMS();
         //sendEmail();
+
     }
 
     public void safe(View view){
@@ -212,30 +219,11 @@ public class MainActivity extends AppCompatActivity {
 
         button.startAnimation(myAnim);
         Toast.makeText(getApplicationContext(), "Safe Button pressed", Toast.LENGTH_SHORT).show();
-        stopService(new Intent(this,LocationHandler.class));
+        htr.stop();
         button.setVisibility(View.INVISIBLE);
         button2.setVisibility(View.VISIBLE);
     }
 
-    /*
-    public void sendEmail(){
-        String email=my.email1.toString();
-    }
-    public void sendSMS() {
-        String phoneNo = my.cont1.toString();
-        try {
-            SmsManager smsManager = SmsManager.getDefault();
-            smsManager.sendTextMessage(phoneNo, null, sms, null, null);
-            Toast.makeText(getApplicationContext(), "SMS Sent!",
-                    Toast.LENGTH_LONG).show();
-        } catch (Exception e) {
-            Toast.makeText(getApplicationContext(),
-                    "SMS faild, please try again later!",
-                    Toast.LENGTH_LONG).show();
-            e.printStackTrace();
-        }
-
-    };*/
 
     public void dataCheck()
     {
@@ -262,4 +250,80 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (mHiddenCameraFragment != null) {    //Remove fragment from container if present
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .remove(mHiddenCameraFragment)
+                    .commit();
+            mHiddenCameraFragment = null;
+        } else { //Kill the activity
+            super.onBackPressed();
+        }
+    }
+
+    public void sendMail() {
+        emailSent=my.dataemail();
+        if(emailSent)
+        {
+            Log.d("Sms","Sms send");
+        }
+    }
+
+    public void sendSMS(){
+        String latitude = "19.782203";
+        String longitude = "72.785457";
+        message="Help me!!!I am in danger. My Location is : ("+"http://www.google.com/maps/place/" + latitude +","+ longitude+")";
+        smsSent=my.datasms(message);
+        if(smsSent)
+        {
+            Log.d("email","email send");
+        }
+
+
+    }
+
+    /* public void siren(View view){
+
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sirensound);
+        mp.start();
+
+        findViewById(R.id.SirenButton).setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                if(!mp.isPlaying())
+                {
+                    mp.start();
+                }
+                else{
+                    mp.seekTo(0);
+                    mp.pause();
+
+                }
+            }
+        });
+    }*/
+
+     /*
+    public void sendEmail(){
+        String email=my.email1.toString();
+    }
+    public void sendSMS() {
+        String phoneNo = my.cont1.toString();
+        try {
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(phoneNo, null, sms, null, null);
+            Toast.makeText(getApplicationContext(), "SMS Sent!",
+                    Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toast.makeText(getApplicationContext(),
+                    "SMS faild, please try again later!",
+                    Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
+
+    };*/
 }
+
+//String s= "My Location is : ("+"http://www.google.com/maps/place/" + latitude +","+ longitude+")";

@@ -42,6 +42,23 @@
         android:onClick="AddContact"
         android:layout_marginStart="15dp" />
         </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show number"
+        android:id="@+id/show_num"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete number"
+            android:layout_marginStart="60dp"
+            android:id="@+id/deleteNum"
+            />
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -74,6 +91,45 @@
             android:layout_marginTop="3dp"
             android:layout_marginStart="25dp"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Email"
+        android:id="@+id/show_email"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete email"
+            android:layout_marginStart="85dp"
+            android:id="@+id/deleteEmail"
+            />
+    </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrolltext"
+        android:isScrollContainer="false"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/scrollLinear" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/show"
+                android:layout_marginStart="77dp"
+                android:layout_marginTop="17dp"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

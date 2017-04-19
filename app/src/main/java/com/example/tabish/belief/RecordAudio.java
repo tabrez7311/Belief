@@ -22,7 +22,7 @@ public class RecordAudio extends AppCompatActivity {
 
     static final String AB = "abcdefghijklmnopqrstuvwxyz";
     static Random rnd = new Random();
-
+    int i=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +32,13 @@ public class RecordAudio extends AppCompatActivity {
         hasSDCard();
 
         voiceStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
-        File audioVoice = new File(voiceStoragePath + File.separator + "voices");
+        File audioVoice = new File(voiceStoragePath + File.separator + "BELIEF");
         if(!audioVoice.exists()){
             audioVoice.mkdir();
         }
-        voiceStoragePath = voiceStoragePath + File.separator + "voices/" + generateVoiceFilename(6) + ".3gpp";
+        voiceStoragePath = voiceStoragePath + File.separator + "BELIEF/" + "Audio"+i + ".3gpp";
+        i++;
         System.out.println("Audio path : " + voiceStoragePath);
-
-        recordingButton = (Button)findViewById(R.id.recordingButton);
 
         initializeMediaRecord();
         if(mediaRecorder == null){
@@ -59,12 +58,12 @@ public class RecordAudio extends AppCompatActivity {
         */
     }
 
-    private String generateVoiceFilename( int len ){
+    /*private String generateVoiceFilename( int len ){
         StringBuilder sb = new StringBuilder( len );
         for( int i = 0; i < len; i++ )
             sb.append( AB.charAt( rnd.nextInt(AB.length()) ) );
         return sb.toString();
-    }
+    }*/
 
     public void startAudioRecording(){
         try {

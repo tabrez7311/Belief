@@ -12,7 +12,7 @@ import java.io.FileOutputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-class Compress {
+public class Compress {
     private static final int BUFFER = 2048;
 
     private String[] _files;

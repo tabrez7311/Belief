@@ -6,8 +6,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.telephony.SmsManager;
+import android.util.Log;
 
-class mycontactdb extends SQLiteOpenHelper{
+import com.example.tabish.belief.sendmail.GMailSender;
+
+public class mycontactdb extends SQLiteOpenHelper{
 
 
     private static final String SQL_DELETE_ENTRIES ="DROP TABLE IF EXISTS " + mycontactdb.TABLE_NAME;
@@ -17,19 +21,27 @@ class mycontactdb extends SQLiteOpenHelper{
     private static final String col_1 = "_ID";
     public static final String cont1="contact_one";
     public static final String email1="email_one";
+    //sms
+    String[] phone;
+    String message;
+
+    //email
+    String[] email;
+    Boolean ismailsent=false;
+    Boolean issmssent=false;
 
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + mycontactdb.TABLE_NAME + " (" +
-                    mycontactdb.col_1 + " INTEGER PRIMARY KEY, " +
-                    mycontactdb.cont1 + " VARCHAR(15) not null" +" )";
+                    mycontactdb.col_1 + " INTEGER PRIMARY KEY autoincrement, " +
+                    mycontactdb.cont1 + " TEXT unique not null" +" )";
 
     private static final String SQL_Email=
             "CREATE TABLE " + mycontactdb.TABLE_NAME2 + " (" +
-                    mycontactdb.col_1 + " INTEGER PRIMARY KEY, " +
-                    mycontactdb.email1 + " VARCHAR(30) not null" +" )";
+                    mycontactdb.col_1 + " INTEGER PRIMARY KEY autoincrement, " +
+                    mycontactdb.email1 + " TEXT unique not null" +" )";
 
 
-    mycontactdb(Context context) {
+    public mycontactdb(Context context) {
         super(context, DATABASE_NAME, null, 1);
 
     }
@@ -71,10 +83,15 @@ class mycontactdb extends SQLiteOpenHelper{
         }
     }
 
-
     public Cursor getAllData(){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from "+ TABLE_NAME,null);
+        Cursor datacursor = db.rawQuery("select * from "+ TABLE_NAME,null);
+        return datacursor;
+    }
+
+    public Cursor getAllEmail(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from "+ TABLE_NAME2,null);
         return res;
     }
 
@@ -93,5 +110,92 @@ class mycontactdb extends SQLiteOpenHelper{
         }
     }
 
+    public boolean deleteNumber(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result;
+        String where = col_1 + " = " + id;
+        result = db.delete(TABLE_NAME,where,null);
+        if(result == -1){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    public boolean deleteEmail(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result;
+        String where = col_1 + " = " + id;
+        result = db.delete(TABLE_NAME2,where,null);
+        if(result == -1){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    public boolean datasms(String message)
+    {
+        issmssent=false;
+        Cursor cursor = getAllData();
+        if (cursor.getCount() == 0) {
+            Log.d("Unable","sms failed");
+            issmssent=false;
+        }
+        for (int i = 0; i < cursor.getCount(); i++) {
+            while (cursor.moveToNext()) {
+                phone[i] = cursor.getString(1);
+            }
+            SmsManager sms= SmsManager.getDefault();
+            sms.sendTextMessage(phone[i], null, message, null,null);
+            issmssent=true;
+        }
+        return issmssent;
+    }
+
+    public boolean dataemail()
+    {
+        ismailsent=false;
+        Cursor cursor=getAllEmail();
+        if(cursor.getCount()==0)
+        {
+            ismailsent=false;
+            Log.d("Data","not found");
+            //Toast.makeText(getApplicationContext(),"Data not found",Toast.LENGTH_SHORT).show();
+
+        }
+        for(int i=0;i<cursor.getCount();i++)
+            while(cursor.moveToNext())
+            {
+                Log.d("email","found");
+                email[i]=cursor.getString(1);
+
+            }
+
+        //*******
+        // Provide Required mail id and password of sender.
+        String sender_mail = "beliefsafetyapp@gmail.com";
+        String sender_password ="tastastas";
+        //*******
+        final GMailSender sender = new GMailSender(sender_mail,sender_password);
+        //String[] toArr = {"tabrezchowkar@gmail.com"};
+        sender.setTo(email);
+        sender.setFrom(sender_mail);
+        sender.setSubject("HELP! HELP! HELP!");
+        sender.setBody("I NEED YOUR HELP CHECK THE ATTACHMENTS");
+
+        try {
+            if(sender.send()) {
+               Log.d("email","email send");
+                ismailsent=true;
+            } else {
+                ismailsent=false;
+                Log.d("email","email failed");
+            }
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    return ismailsent;
+    }
 }
 
