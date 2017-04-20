@@ -16,6 +16,7 @@ import android.os.Handler;
 import android.os.Vibrator;
 import android.telephony.SmsManager;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.tabish.belief.MainActivity;
@@ -23,6 +24,7 @@ import com.example.tabish.belief.R;
 import com.example.tabish.belief.RecordAudio;
 import com.example.tabish.belief.cameraback.DemoCamService;
 import com.example.tabish.belief.cameraback.HiddenCamera.HiddenCameraFragment;
+import com.example.tabish.belief.cameraback.HiddenCamera.HiddenCameraService;
 import com.example.tabish.belief.mycontactdb;
 
 import java.io.File;
@@ -34,16 +36,8 @@ import static android.content.Intent.ACTION_SCREEN_ON;
 
 import com.example.tabish.belief.Compress;
 
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
-import javax.mail.BodyPart;
-import javax.mail.internet.MimeBodyPart;
-
-
 public class HardwareTriggerReceiver extends BroadcastReceiver {
     public static final int ALERT_CONFIRMATION_VIBRATION_DURATION = 500;
-    private Context context;
 
     private static final String TAG = HardwareTriggerReceiver.class.getName();
     //    private MultiClickEvent multiClickEvent;
@@ -58,20 +52,22 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
     String voiceStoragePath;
     static final String AB = "abcdefghijklmnopqrstuvwxyz";
     static Random rnd = new Random();
-    int i=1;
     int goIN=1;
+    int i=1;
 
     //handler
     int smstime=05;
     int recordtime=25;
-    int phototime=46025;
-    int compresstime=47030;
-    int emailtime=50000;
-
-
+    int phototime=55025;
+    int compresstime=56030;
+    int emailtime=60000;
 
     //take photo
+    private HiddenCameraFragment mHiddenCameraFragment;
     protected MainActivity main=new MainActivity();
+
+    //MainActvity Panic button
+
 
     public HardwareTriggerReceiver() {
         resetEvent();
@@ -83,7 +79,6 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
         String action = intent.getAction();
         if (!isCallActive(context) && (action.equals(ACTION_SCREEN_OFF) || action.equals(ACTION_SCREEN_ON))) {
             multiClickEvent.registerClick(System.currentTimeMillis());
-
             if(multiClickEvent.skipCurrentClick()){
                 Log.e("*****", "skipped click");
                 multiClickEvent.resetSkipCurrentClickFlag();
@@ -94,12 +89,14 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
                 if(goIN==1) {
                     Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
                     vibrator.vibrate(ALERT_CONFIRMATION_VIBRATION_DURATION);
-                    startInner();
+                    startInner(context);
                     goIN=0;
+                    Log.d("HARDWARE TRIGGERED","<<<<<<<-----------------ACTIVATED---------------->>>>>>>>>>");
                 }
                 else {
                     stop();
                     goIN=1;
+                    Log.d("HARDWARE TRIGGERED","<<<<<<<-----------------DEACTIVATED---------------->>>>>>>>>>");
                 }
                 }
                 //PanicAlert panicAlert = getPanicAlert(context);
@@ -114,13 +111,14 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
         }
 
 
-    public void startInner()
+    public void startInner(final Context context)
     {
         final Handler sms = new Handler();
         sms.postDelayed(new Runnable() {
             @Override
             public void run() {
-                main.sendSMS();
+                //main.sendSMS();
+                Log.d("SMS sent","<<<<<<<--------------SMS SMS SMS SMS senD-------------------->>>>>>>>>>");
                 smstime+=900000;}
             },smstime);  //1 minutes
 
@@ -130,11 +128,12 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
             public void run() {
                 hasSDCard();
                 voiceStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
-                File audioVoice = new File(voiceStoragePath + File.separator + "voices");
+                File audioVoice = new File(voiceStoragePath + File.separator + "Belief");
                 if(!audioVoice.exists()){
                     audioVoice.mkdir();
                 }
-                voiceStoragePath = voiceStoragePath + File.separator + "voices/" + generateVoiceFilename(6) + ".3gpp";
+                voiceStoragePath = voiceStoragePath + File.separator + "Belief/" + "Audio"+i + ".3gpp";
+
                 System.out.println("Audio path : " + voiceStoragePath);
                 initializeMediaRecord();
                 if(mediaRecorder == null){
@@ -142,6 +141,7 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
                 }
                 startAudioRecording();
                 recordtime+=900000;
+                Log.d("AUDIO RECORDING","<<<<<<-------------Audio recorded--------------->>>>");
             }
         },recordtime);      //1 minutes
 
@@ -149,7 +149,9 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
         takePhoto.postDelayed(new Runnable() {
             @Override
             public void run() {
-            main.clickPhoto();
+
+                //main.clickPhoto(context);
+                //Log.d("PHOTO","<<<<<<--------------photo taken--------------->>>>>>>>>>");
                 phototime+=900000;
             }
         },phototime);      //1 minutes
@@ -158,13 +160,13 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
         compress.postDelayed(new Runnable() {
             @Override
             public void run() {
-                final String files[]=new String[4];
-                files[0]=Environment.getExternalStorageDirectory().getAbsolutePath()+ "/BELIEF/Audio"+i+".3gpp";
-                files[2]=Environment.getExternalStorageDirectory().getAbsolutePath()+ "/BELIEF/Photo"+i+".jpeg";
-                Compress comp = new Compress(files,Environment.getExternalStorageDirectory().getAbsolutePath()+"/BELIEF/BELIEF"+i+".zip");
-                comp.zip();
-                System.out.println("--------------------FILES ZIPPED AND DATA TURNED ON-----------------");
-                compresstime+=900000;
+                //final String files[]=new String[2];
+                //files[0]=Environment.getExternalStorageDirectory().getAbsolutePath()+ "/BELIEF/Audio"+i+".3gpp";
+                //files[1]=Environment.getExternalStorageDirectory().getAbsolutePath()+ "/BELIEF/Photo"+i+".jpeg";
+                //Compress comp = new Compress(files,Environment.getExternalStorageDirectory().getAbsolutePath()+"/BELIEF/BELIEF"+i+".zip");
+                //comp.zip();
+                //System.out.println("--------------------FILES ZIPPED-----------------");
+                //compresstime+=900000;
             }
         }, compresstime);
 
@@ -206,7 +208,6 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
         AudioManager manager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
         return manager.getMode() == AudioManager.MODE_IN_CALL;
     }
-
     //record audio
     private String generateVoiceFilename( int len ){
         StringBuilder sb = new StringBuilder( len );
@@ -235,6 +236,7 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
             mediaRecorder.stop();
             mediaRecorder.release();
             mediaRecorder = null;
+            Log.d("Recording ","<--------------STOPPED------------->");
         }
     }
 
@@ -256,8 +258,6 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
         mediaRecorder.setOutputFile(voiceStoragePath);
     }
 
-
-    //email
 
 }
 

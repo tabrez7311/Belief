@@ -104,7 +104,7 @@ public class MultiClickEvent {
                     Object[] powerEventLogData = (Object[]) event.getData();
                     if(powerEventLogData.length > 2 && (Integer)powerEventLogData[0] == IS_POWER_STATE_ASLEEP){
                         boolean isPowerChangeUserTriggered = (Integer) powerEventLogData[1] == IS_STATE_CHANGE_USER_TRIGERRED;
-                        Log.e(">>>>>> is Power change user triggered? ", "" + isPowerChangeUserTriggered);
+                        Log.e("is Power change triggered?", "" + isPowerChangeUserTriggered);
                         return isPowerChangeUserTriggered;
                     }
                 }catch (ClassCastException ce){

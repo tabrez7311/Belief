@@ -37,5 +37,7 @@ public class HardwareTriggerService extends Service {
     public IBinder onBind(Intent intent) {
         return null;
     }
+
+
 }
 

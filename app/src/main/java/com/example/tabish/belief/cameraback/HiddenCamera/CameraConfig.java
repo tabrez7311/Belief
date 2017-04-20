@@ -184,11 +184,11 @@ public final class CameraConfig {
         @NonNull
         private File getDefaultStorageFile() {
             PhotoStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
-            File photopath = new File(PhotoStoragePath + File.separator + "BELIEF");
+            File photopath = new File(PhotoStoragePath + File.separator + "Belief");
             if(!photopath.exists()){
                 photopath.mkdir();
             }
-            PhotoStoragePath = PhotoStoragePath + File.separator + "BELIEF/" + "Photo"+i +".jpeg";
+            PhotoStoragePath = PhotoStoragePath + File.separator + "Belief/" + "Photo"+i +".jpeg";
             i++;
             return new File(PhotoStoragePath);
         }

@@ -64,8 +64,18 @@
         <activity android:name=".HelpMain" android:theme="@android:style/Theme.Black.NoTitleBar"/>
 
         <receiver android:name=".FakeCallReceiver" />
+        <receiver android:name=".Trigger.HardwareTriggerReceiver"/>
+        <receiver android:name=".SMSListener">
+        <intent-filter>
+            <action android:name="android.provider.Telephony.SMS_RECEIVED" >
+            </action>
+        </intent-filter>
+        </receiver>
         <service android:name=".Trigger.HardwareTriggerService"/>
         <service android:name=".LocationHandler"/>
+
+        <service android:name=".cameraback.DemoCamService"/>
+
 
     </application>
 

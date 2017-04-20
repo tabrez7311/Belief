@@ -85,13 +85,13 @@ public class mycontactdb extends SQLiteOpenHelper{
 
     public Cursor getAllData(){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor datacursor = db.rawQuery("select * from "+ TABLE_NAME,null);
+        Cursor datacursor = db.rawQuery("SELECT  * FROM " + TABLE_NAME,null);
         return datacursor;
     }
 
     public Cursor getAllEmail(){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from "+ TABLE_NAME2,null);
+        Cursor res = db.rawQuery("SELECT  * FROM " + TABLE_NAME2,null);
         return res;
     }
 
@@ -109,6 +109,24 @@ public class mycontactdb extends SQLiteOpenHelper{
 //populate table
         }
     }
+
+    /*public boolean datasms(String message)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        issmssent=false;
+        String data="SELECT * FROM "+ TABLE_NAME;
+        Cursor cursor=db.rawQuery(data,null);
+        for (int i = 0; i < cursor.getCount(); i++) {
+            while (cursor.moveToNext()) {
+                phone[i] = cursor.getString(1);
+            }
+            SmsManager sms= SmsManager.getDefault();
+            sms.sendTextMessage(phone[i], null, message, null,null);
+            issmssent=true;
+        }
+        cursor.close();
+        return issmssent;
+    }*/
 
     public boolean deleteNumber(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -134,25 +152,7 @@ public class mycontactdb extends SQLiteOpenHelper{
         }
     }
 
-    public boolean datasms(String message)
-    {
-        issmssent=false;
-        Cursor cursor = getAllData();
-        if (cursor.getCount() == 0) {
-            Log.d("Unable","sms failed");
-            issmssent=false;
-        }
-        for (int i = 0; i < cursor.getCount(); i++) {
-            while (cursor.moveToNext()) {
-                phone[i] = cursor.getString(1);
-            }
-            SmsManager sms= SmsManager.getDefault();
-            sms.sendTextMessage(phone[i], null, message, null,null);
-            issmssent=true;
-        }
-        return issmssent;
-    }
-
+/*
     public boolean dataemail()
     {
         ismailsent=false;
@@ -197,5 +197,6 @@ public class mycontactdb extends SQLiteOpenHelper{
         }
     return ismailsent;
     }
+    */
 }
 

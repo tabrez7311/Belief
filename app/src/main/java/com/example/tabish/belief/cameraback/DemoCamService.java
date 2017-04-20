@@ -52,6 +52,7 @@ public class DemoCamService extends HiddenCameraService {
                     @Override
                     public void run() {
                         takePicture();
+                        Log.d("Photo","<<<<<<<<<<<<-------Photo service started------------->>>>>>>");
                     }
                 }, 2000);
             } else {

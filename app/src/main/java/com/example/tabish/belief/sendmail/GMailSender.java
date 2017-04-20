@@ -97,16 +97,21 @@ public class GMailSender extends javax.mail.Authenticator {
 
             msg.setSubject(_subject);
             msg.setSentDate(new Date());
+            String latitude = "19.782203";
+            String longitude = "72.785457";
 
             // setup message body
             BodyPart messageBodyPart = new MimeBodyPart();
-            messageBodyPart.setText(_body);
-            String filename= Environment.getExternalStorageDirectory().getPath()+"/BELIEF/BELIEF"+i+".zip";
+            messageBodyPart.setText("I NEED YOUR HELP CHECK THE ATTACHMENTS\n My Location is : ("+"http://www.google.com/maps/place/" + latitude +","+ longitude+")");
+            String filename= Environment.getExternalStorageDirectory().getPath()+"/Belief/Audio"+i+".3gpp";
+            String photoname=Environment.getExternalStorageDirectory().getPath()+"/Belief/Photo"+i+".jpeg";
             i++;
-            DataSource source = new FileDataSource(filename);
-            messageBodyPart.setDataHandler(new DataHandler(source));
-            messageBodyPart.setFileName(filename);
-            _multipart.addBodyPart(messageBodyPart);
+            addAttachment(filename);
+            addAttachment(photoname);
+            //DataSource source = new FileDataSource(filename);
+            //messageBodyPart.setDataHandler(new DataHandler(source));
+            //messageBodyPart.setFileName(filename);
+           // _multipart.addBodyPart(messageBodyPart);
 
             // Put parts in message
             msg.setContent(_multipart);
