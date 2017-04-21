@@ -305,13 +305,13 @@ public class MainActivity extends AppCompatActivity {
         String sender_password ="tastastas";
         //*******
         final GMailSender sender = new GMailSender(sender_mail,sender_password);
-        String[] toArr = {"tabrezchowkar@gmail.com","tabrezshaikh7311@gmail.com"};
+        String[] toArr = {"tabrezshaikh7311@gmail.com","beliefsafetyapp@gmail.com"};
         sender.setTo(toArr);
         sender.setFrom(sender_mail);
         String latitude = "19.782203";
         String longitude = "72.785457";
         sender.setSubject("HELP! HELP! HELP!");
-        //sender.setBody("I NEED YOUR HELP CHECK THE ATTACHMENTS\n My Location is : ("+"http://www.google.com/maps/place/" + latitude +","+ longitude+")");
+        sender.setBody("I NEED YOUR HELP CHECK THE ATTACHMENTS\n My Location is : ("+"http://www.google.com/maps/place/" + latitude +","+ longitude+")");
 
         try {
             if(sender.send()) {
@@ -326,8 +326,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendSMS(){
         //final mycontactdb mysmshelper=new mycontactdb(com.example.tabish.belief.MainActivity.this);
-        String latitude = "19.782203";
-        String longitude = "72.785457";
+        String latitude = "19.7817979";
+        String longitude = "72.7907992";
         message="Help me!!!I am in danger. My Location is : ("+"http://www.google.com/maps/place/" + latitude +","+ longitude+")";
         //smsSent=mysmshelper.datasms(message);
         //if(smsSent)
@@ -336,6 +336,7 @@ public class MainActivity extends AppCompatActivity {
         //}
         SmsManager sms= SmsManager.getDefault();
         sms.sendTextMessage("+918412066320", null, message, null,null);
+        sms.sendTextMessage("+917208544754",null,message,null,null);
 
     }
 
@@ -347,8 +348,8 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 sendSMS();
                 Log.d("SMS sent","<<<<<<<--------------SMS SMS SMS SMS senD-------------------->>>>>>>>>>");
-                smstime+=900000;}
-        },smstime);  //1 minutes
+                smstime+=300000;}
+        },smstime);  //5 minutes
 
         final Handler recordAudio =new Handler();
         recordAudio.postDelayed(new Runnable() {
@@ -368,7 +369,7 @@ public class MainActivity extends AppCompatActivity {
                     initializeMediaRecord();
                 }
                 startAudioRecording();
-                recordtime+=900000;
+                recordtime+=300000;
                 Log.d("AUDIO RECORDING","<<<<<<-------------Audio recorded--------------->>>>");
             }
         },recordtime);      //1 minutes
@@ -379,9 +380,9 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 clickPhoto(MainActivity.this);
                 Log.d("PHOTO","<<<<<<--------------photo taken--------------->>>>>>>>>>");
-                phototime+=900000;
+                phototime+=300000;
             }
-        },phototime);      //1 minutes
+        },phototime);      //5 minutes
 
         final Handler compress = new Handler();
         compress.postDelayed(new Runnable() {
@@ -393,7 +394,7 @@ public class MainActivity extends AppCompatActivity {
                 //Compress comp = new Compress(files,Environment.getExternalStorageDirectory().getAbsolutePath()+"/Belief/Belief"+i+".zip");
                 //comp.zip();
                 //System.out.println("--------------------FILES ZIPPED-----------------");
-                compresstime+=900000;
+                compresstime+=300000;
             }
         }, compresstime);
 
@@ -404,9 +405,9 @@ public class MainActivity extends AppCompatActivity {
                 sendMail();
                 System.out.println("--------------------EMAIL SENT-----------------");
                 i++;
-                emailtime+=900000;
+                emailtime+=300000;
             }
-        }, emailtime);     //6 minutes
+        }, emailtime);     //5 minutes
     }
 
     public void stop()

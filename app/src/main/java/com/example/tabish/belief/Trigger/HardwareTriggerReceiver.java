@@ -117,10 +117,10 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
         sms.postDelayed(new Runnable() {
             @Override
             public void run() {
-                //main.sendSMS();
+                main.sendSMS();
                 Log.d("SMS sent","<<<<<<<--------------SMS SMS SMS SMS senD-------------------->>>>>>>>>>");
-                smstime+=900000;}
-            },smstime);  //1 minutes
+                smstime+=300000;}
+            },smstime);  //5 minutes
 
         final Handler recordAudio =new Handler();
         recordAudio.postDelayed(new Runnable() {
@@ -140,10 +140,10 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
                     initializeMediaRecord();
                 }
                 startAudioRecording();
-                recordtime+=900000;
+                recordtime+=300000;
                 Log.d("AUDIO RECORDING","<<<<<<-------------Audio recorded--------------->>>>");
             }
-        },recordtime);      //1 minutes
+        },recordtime);      //5 minutes
 
         final Handler takePhoto =new Handler();
         takePhoto.postDelayed(new Runnable() {
@@ -152,9 +152,9 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
 
                 //main.clickPhoto(context);
                 //Log.d("PHOTO","<<<<<<--------------photo taken--------------->>>>>>>>>>");
-                phototime+=900000;
+                phototime+=300000;
             }
-        },phototime);      //1 minutes
+        },phototime);      //5 minutes
 
         final Handler compress = new Handler();
         compress.postDelayed(new Runnable() {
@@ -176,9 +176,9 @@ public class HardwareTriggerReceiver extends BroadcastReceiver {
             public void run() {
                 main.sendMail();
                 System.out.println("--------------------EMAIL SENT-----------------");
-                emailtime+=900000;
+                emailtime+=300000;
             }
-        }, emailtime);     //6 minutes
+        }, emailtime);     //5 minutes
     }
 
     public void stop()
